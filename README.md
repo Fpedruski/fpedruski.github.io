@@ -1,37 +1,72 @@
-## Welcome to GitHub Pages
+<h2 align="center">
+ <img src="/assets/hello.gif" width="24" height="24"> Hi There, Forasteiro
+</h2>
 
-You can use the [editor on GitHub](https://github.com/Fpedruski/fpedruski.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+<h3 align="center">
+A passionate frontend developer from Brasil 🇧🇷
+</h3>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<!-- <h3 align="center">Pronouns: he/him</h3> -->
 
-### Markdown
+<align align="right">
+<img alt="Working" title="Desk" src="/assets/zz.gif" width="100%" height="100%" />
+</a>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+<h1 align="center">
+Found this ✨ special ✨ place called coding 
+</h1
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+💻 I'm a Front-End Developer from Brazil.
 
-1. Numbered
-2. List
+🎓 At the moment studying to complete my degree in Computer Science.
 
-**Bold** and _Italic_ and `Code` text
+🔭 I’m currently working as freelancer and I'm very hyped to restart my programming life.
 
-[Link](url) and ![Image](src)
-```
+📖 I'm currently learning Javascript, Tailwind, React and UX/UI Design, besides expanding my knowledge on Git/Github.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+📚 I'm also planning to study P5, Processing and Drawing.
 
-### Jekyll Themes
+🌎 I have experience in Graphic Design, Marketing and a lot of travel.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Fpedruski/fpedruski.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+💬 In addition to web development, science and technology, I like to talk about arts and culture, especially music, movies, painting, travel and books.
 
-### Support or Contact
+🎉 My hobbies are listening to music, playing instruments (guitar, acoustic guitar,piano), watching some series and movies, exercising, searching for recipes, reading and taking care of plants.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Using at the moment to study :heart::
+<h2 align="center">
+
+<!-- <align align="center">
+<img alt="Working" title="Desk" src="/assets/middle1.png" width="1240px" height="500" />
+</a> -->
+
+<img alt="" src="assets/nlw.png" width="24x" height="24px"></img>  [RocketSeat](https://www.rocketseat.com.br) :rocket:
+
+<img alt="" src="assets/educativeio.png" width="24x" height="24px"></img>  [Educative](https://educative.io) <!-- :books: -->
+
+<img alt="" src="assets/odin.svg" width="24x" height="24px"></img> [Odin Project](https://theodinproject.com)  <!-- :tent: -->
+</h2>
+<h3 align="center">
+💬 Contact me for anything, i'm always happy to help    :smile:
+</h3>
+<h1 align="center">
+                   📯 How to reach me: 
+</h1>
+
+
+
+<h3 align="center">
+<span >
+<a href="https://www.linkedin.com/in/felipe-santos-poch-61226684/">
+<img alt="" src="assets/linkedin.svg" width="24x" height="24px"></img>
+</a> 
+<a mailto="fpedruski@icloud.com">
+<img alt="" src="assets/email.svg" width="24px" height="24px"/></img>
+</a>  
+<a href="https://twitter.com/Felipe-Pedruski">
+<img alt="" src="assets/twitter.svg" width="24px" height="24px"/></img>
+</a>
+
+</span>
+</h3>
