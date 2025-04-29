@@ -5,115 +5,148 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../styles/tailwind.css">
+  <!-- Tailwind CSS -->
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- Js Library -->
+  <!-- JS Library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-
-  <!-- Fav icons-->
+  <!-- Fav Icon -->
   <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
-
-  <title> Fpedruski | Portafolio</title>
+  <title>Fpedruski | Portfolio</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Roboto', sans-serif; }
+    .gradient-bar { height: 4px; background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f); }
+    /* Rotated menu on right */
+    .Menu {
+      position: fixed;
+      right: 30px;
+      top: 30px;
+      z-index: 10;
+      text-align: right;
+      transform-origin: bottom right;
+      transform: rotate(-90deg) translateX(28px);
+    }
+    .Menu nav { display: inline-flex; gap: 2rem; }
+    .Menu nav a { text-decoration: none; color: #444; transition: color .2s; }
+    .Menu nav a:hover, .Menu nav a.selected { color: #ff7e5f; }
+  </style>
 </head>
 
-<body class="">
-  <main class=" bg-white ">
-    <section id=" main-section" class=" bg-white lg:h-full">
-      <div class="lg:grid lg:grid-cols-2 lg:items-center ">
+<body class="bg-white">
+  <!-- Rotated Menu -->
+  <div class="Menu">
+    <nav>
+      <a href="/contact" data-id="Contact" data-route="contact">Contact</a>
+      <a href="/lab" data-id="Lab" data-route="lab">Lab</a>
+      <a href="/works" data-id="Work" data-route="work">Work</a>
+      <a href="/about" data-id="About" data-route="about" class="selected">About</a>
+    </nav>
+  </div>
 
-        <a href="#"><img src="img/zzz-teest.gif" alt="mainlogo" class="lg:object-cover"></a>
-        <div class="lg:text-2xl lg:first-letter:text-4xl ">
-
-          <a href=""></a>
-          <h2 class=" pl-6 pt-6">
-            <span id="word" class="font-bold md:text-2xl lg:text-4xl ">Hello</span>, Forasteiro!
-          </h2>
-          <section id="introduction" class="grid grid-rows-1 p-6 ">
-            <div>
-              <p class="overflow-hidden">
-                I'm a Front-End Developer from Brazil.
-                <br />
-                <br /><br />
-
-                <br />
-                • Currently expanding my expertise in JavaScript, Tailwind CSS, React, and UX/UI Design
-                • Actively engaged in freelance projects, applying cutting-edge web technologies
-                • Committed to mastering version control through Git/GitHub
-                • Future focus includes exploring creative coding through P5.js and Processing
-                <br /><br />
-                Background:
-                <br />
-                My journey encompasses valuable experience in Graphic Design and Marketing, complemented by extensive international travel that has broadened my perspective on global design trends and user experiences.
-                <br /><br />
-              </p>
-
-              <h3 class="text-gray-700 font-black pt-6 pb-16">
-                Felipe Pedruski
-              </h3>
-            </div>
-
-            <div id="socials" class="grid grid-cols-5 ">
-
-
-              <div class="h-14 w-14 text-2xl text-center self-center">
-
-                <a
-                  href="https://www.linkedin.com/in/felipe-santos-poch/?lipi=urn%3Ali%3Apage%3Aonboarding_start_index%3Bb916452e-4404-4026-9bf3-274207a6246a">
-                  <img class="h-14 w-14" src="./img/linkedin.svg" alt="Linkedin"></a>
-              </div>
-
-              <div class="h-14 w-14 text-2xl ">
-                <a href="https://twitter.com/FelipePedruski"><img class="h-14 w-14" src="./img/twitter.svg"
-                    alt="Twitter"></a>
-
-              </div>
-
-              <div class="h-14 w-14 text-2xl text-center justify-self-center items-center self-center">
-                <a href="https://github.com/Fpedruski"> <img class="h-14 w-14" src="./img/github.svg"
-                    alt="Instagram"></a>
-              </div>
-
-
-              <div class="h-14 w-14 text-2xl text-center justify-self-center items-center self-center  ">
-                <a href="tel:+34 661857146"><img class="h-14 w-14" src="./img/telegram-app.svg" alt="Telegram"> </a>
-              </div>
-
-
-
-              <div class="h-14 w-14 text-2xl text-center justify-self-center items-center self-center ">
-                <a href="http://www.instagram.com/fpedruski/"><img class="h-14 w-14" src="./img/instagram.svg"
-                    alt="Instagram"></a>
-
-              </div>
-
-            </div>
-
-          </section>
-        </div>
+  <!-- About Section -->
+  <section id="about" class="min-h-screen bg-white flex lg:grid lg:grid-cols-2 items-center p-6">
+    <!-- Left: GIF Logo -->
+    <div class="flex justify-center mb-8 lg:mb-0">
+      <img src="img/zzz-teest.gif" alt="mainlogo" class="object-contain max-h-96">
+    </div>
+    <!-- Right: Introduction -->
+    <div class="space-y-6">
+      <div class="gradient-bar mb-4"></div>
+      <h1 class="text-5xl lg:text-7xl font-bold">
+        <span id="word">Hello</span>, Forasteiro!
+      </h1>
+      <div class="gradient-bar mt-4"></div>
+      <p class="text-lg">
+        I'm a Front-End Developer from Brazil.<br><br>
+        • Currently expanding my expertise in JavaScript, Tailwind CSS, React, and UX/UI Design<br>
+        • Actively engaged in freelance projects, applying cutting-edge web technologies<br>
+        • Committed to mastering version control through Git/GitHub<br>
+        • Future focus includes exploring creative coding through P5.js and Processing<br><br>
+        Background:<br>
+        My journey encompasses valuable experience in Graphic Design and Marketing, complemented by extensive international travel that has broadened my perspective on global design trends and user experiences.
+      </p>
+      <h3 class="text-gray-700 font-black pt-6">Felipe Pedruski</h3>
+      <!-- Socials -->
+      <div class="grid grid-cols-5 gap-4">
+        <a href="https://www.linkedin.com/in/felipe-santos-poch/">
+          <img class="h-10 w-10" src="./img/linkedin.svg" alt="Linkedin">
+        </a>
+        <a href="https://twitter.com/FelipePedruski">
+          <img class="h-10 w-10" src="./img/twitter.svg" alt="Twitter">
+        </a>
+        <a href="https://github.com/Fpedruski">
+          <img class="h-10 w-10" src="./img/github.svg" alt="GitHub">
+        </a>
+        <a href="tel:+34 661857146">
+          <img class="h-10 w-10" src="./img/telegram-app.svg" alt="Telegram">
+        </a>
+        <a href="http://www.instagram.com/fpedruski/">
+          <img class="h-10 w-10" src="./img/instagram.svg" alt="Instagram">
+        </a>
       </div>
+    </div>
+  </section>
 
-      </footer>
+  <!-- Work Section -->
+  <section id="work" class="min-h-screen bg-gray-50 flex flex-col justify-center items-center p-6">
+    <h2 class="text-3xl font-semibold mb-4">Work</h2>
+    <ul class="space-y-3 text-left list-disc list-inside">
+      <li>Project One — Description and link</li>
+      <li>Project Two — Description and link</li>
+      <li>Project Three — Description and link</li>
+    </ul>
+  </section>
 
+  <!-- Lab Section -->
+  <section id="lab" class="min-h-screen flex flex-col justify-center items-center p-6">
+    <h2 class="text-3xl font-semibold mb-4">Lab</h2>
+    <ul class="space-y-3 text-left list-disc list-inside">
+      <li>Experiment A — Details</li>
+      <li>Experiment B — Details</li>
+      <li>Experiment C — Details</li>
+    </ul>
+  </section>
 
-      <script>
-        $(function () {
-          count = 0;
-          wordsArray = ["Hello", "Ciao", "Hola", "Oi"];
-          setInterval(function () {
-            count++;
-            $("#word").fadeOut(400, function () {
-              $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
-            });
-          }, 2000);
+  <!-- Contact Section -->
+  <section id="contact" class="min-h-screen bg-gray-50 flex flex-col justify-center items-center p-6">
+    <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+    <ul class="flex space-x-6">
+      <li><a href="mailto:you@example.com" class="hover:text-gray-900">Email</a></li>
+      <li><a href="https://github.com/username" class="hover:text-gray-900">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/username" class="hover:text-gray-900">LinkedIn</a></li>
+      <li><a href="https://twitter.com/username" class="hover:text-gray-900">Twitter</a></li>
+    </ul>
+  </section>
+
+  <script>
+    // Word rotation
+    $(function () {
+      let count = 0;
+      const wordsArray = ["Hello", "Ciao", "Hola", "Oi"];
+      setInterval(function () {
+        count++;
+        $("#word").fadeOut(400, function () {
+          $(this).text(wordsArray[count % wordsArray.length]).fadeIn(400);
         });
-      </script>
-
-
+      }, 2000);
+    });
+    // Highlight current menu link on scroll
+    const sections = document.querySelectorAll('section');
+    const menuLinks = document.querySelectorAll('.Menu nav a');
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - window.innerHeight / 2;
+        if (pageYOffset >= top) currentId = sec.getAttribute('id');
+      });
+      menuLinks.forEach(link => {
+        link.classList.toggle('selected', link.getAttribute('href') === '/' + currentId);
+      });
+    });
+  </script>
+</body>
 
 </html>
