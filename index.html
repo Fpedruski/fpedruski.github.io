@@ -16,10 +16,17 @@
   <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
   <title>Fpedruski | Portfolio</title>
   <style>
+    /* smooth scrolling & Roboto */
     html { scroll-behavior: smooth; }
     body { font-family: 'Roboto', sans-serif; }
-    .gradient-bar { height: 4px; background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f); }
-    /* Rotated menu on right */
+
+    /* Updated gradient bar */
+    .gradient-bar {
+      height: 4px;
+      background: linear-gradient(90deg, #00FFA3, #DC1FFF);
+    }
+
+    /* Rotated menu on right with little discs */
     .Menu {
       position: fixed;
       right: 30px;
@@ -29,9 +36,58 @@
       transform-origin: bottom right;
       transform: rotate(-90deg) translateX(28px);
     }
-    .Menu nav { display: inline-flex; gap: 2rem; }
-    .Menu nav a { text-decoration: none; color: #444; transition: color .2s; }
-    .Menu nav a:hover, .Menu nav a.selected { color: #ff7e5f; }
+    .Menu nav {
+      display: inline-flex;
+      gap: 2rem;
+    }
+    .Menu nav a {
+      position: relative;
+      padding-right: 1rem;
+      text-decoration: none;
+      color: #444;
+      transition: color .2s;
+    }
+    .Menu nav a::after {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background-color: currentColor;
+      border-radius: 50%;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.6;
+    }
+    .Menu nav a.selected {
+      color: #00FFA3;
+    }
+
+    /* GG Symbols Grid Styles from Guillaume */
+    .gg { display: flex; height: 14px; margin-bottom: 11px; }
+    .gg-last { margin-bottom: 0; }
+    .gg--indent { margin-left: 56px; }
+    .gg-symbol { height: 14px; width: 14px; background: #969696; margin-right: 14px; transform-origin: 0 0; }
+    .gg-symbol--disc { border-radius: 14px; }
+    .gg-symbol--rect { /* width overridden */ }
+    .gg-symbol--1 { width: 28px; }
+    .gg-symbol--2 { width: 56px; }
+    .gg-symbol--3 { width: 84px; }
+    .gg-symbol--4 { width: 112px; }
+    .gg-symbol--5 { width: 140px; }
+    .gg-symbol--6 { width: 168px; }
+    .gg-symbol--7 { width: 196px; }
+    .gg-symbol--8 { width: 224px; }
+    .gg-symbol--9 { width: 252px; }
+    .gg-symbol--10 { width: 280px; }
+    .gg-symbol--11 { width: 308px; }
+    .gg-symbol--gradient { /* gradient inline */ }
+
+    /* add right padding so the rotated menu never overlaps content */
+    section#about, section#contact {
+      padding-right: 5rem; /* roughly Tailwind's lg:pr-20 */
+    }
   </style>
 </head>
 
@@ -41,57 +97,79 @@
     <nav>
       <a href="/contact" data-id="Contact" data-route="contact">Contact</a>
       <a href="/lab" data-id="Lab" data-route="lab">Lab</a>
-      <a href="/works" data-id="Work" data-route="work">Work</a>
+      <a href="/work" data-id="Work" data-route="work">Work</a>
       <a href="/about" data-id="About" data-route="about" class="selected">About</a>
     </nav>
   </div>
 
+  <!-- Intro Section: Name with gradient bars -->
+  <section id="intro" class="min-h-screen flex flex-col justify-center items-center text-center p-6">
+    <div class="Home-content">
+      <div class="gg">
+        <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient" style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></div>
+        <div class="gg-symbol gg-symbol--rect gg-symbol--3"></div>
+        <div class="gg-symbol gg-symbol--disc"></div>
+      </div>
+      <div class="gg">
+        <div class="gg-symbol gg-symbol--rect gg-symbol--8 gg-symbol--gradient" style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></div>
+      </div>
+      <div class="gg">
+        <div class="gg-symbol gg-symbol--rect gg-symbol--3 gg-symbol--gradient" style="background: linear-gradient(90deg, rgb(242, 159, 255) 0%, rgb(124, 153, 255) 100%);"></div>
+        <div class="gg-symbol gg-symbol--square"></div>
+        <div class="gg-symbol gg-symbol--rect gg-symbol--2"></div>
+        <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient" style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></div>
+      </div>
+    </div>
+    <h1 class="text-7xl font-bold mb-4">Felipe Santos Poch</h1>
+    <div class="Home-content">
+      <div class="gg">
+        <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient" style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%);"></div>
+        <div class="gg-symbol gg-symbol--rect gg-symbol--2 gg-symbol--gradient" style="background: linear-gradient(90deg, rgb(255, 218, 122) 0%, rgb(255, 105, 105) 100%);"></div>
+      </div>
+      <div class="gg">
+        <div class="gg-symbol gg-symbol--rect gg-symbol--8 gg-symbol--gradient" style="background: linear-gradient(90deg, rgb(100, 145, 214) 0%, rgb(67, 240, 199) 100%);"></div>
+      </div>
+    </div>
+    <p class="text-xl mt-6">
+      Front-End Developer | JavaScript • Tailwind CSS • React • UX/UI Design
+    </p>
+  </section>
+
   <!-- About Section -->
-  <section id="about" class="min-h-screen bg-white flex lg:grid lg:grid-cols-2 items-center p-6">
+  <section id="about" class="min-h-screen bg-[#FCFCFD] flex lg:grid lg:grid-cols-2 items-center p-6">
     <!-- Left: GIF Logo -->
     <div class="flex justify-center mb-8 lg:mb-0">
-      <img src="img/zzz-teest.gif" alt="mainlogo" class="object-contain max-h-96">
+      <img
+        src="img/zzz-teest.gif"
+        alt="mainlogo"
+        class="object-contain w-full max-w-md lg:max-w-lg"
+      >
     </div>
-    <!-- Right: Introduction -->
-    <div class="space-y-6">
-      <div class="gradient-bar mb-4"></div>
-      <h1 class="text-5xl lg:text-7xl font-bold">
-        <span id="word">Hello</span>, Forasteiro!
-      </h1>
-      <div class="gradient-bar mt-4"></div>
-      <p class="text-lg">
+    <!-- Right: Introduction Paragraph & Socials -->
+    <div>
+      <!-- <h3 class="text-gray-700 font-black pt-6 pb-6">Felipe Santos Poch</h3> -->
+      <p class="mb-6">
         I'm a Front-End Developer from Brazil.<br><br>
         • Currently expanding my expertise in JavaScript, Tailwind CSS, React, and UX/UI Design<br>
         • Actively engaged in freelance projects, applying cutting-edge web technologies<br>
         • Committed to mastering version control through Git/GitHub<br>
-        • Future focus includes exploring creative coding through P5.js and Processing<br><br>
+        • Future focus includes exploring creative coding through P5.js and Processing
+        <br><br>
         Background:<br>
         My journey encompasses valuable experience in Graphic Design and Marketing, complemented by extensive international travel that has broadened my perspective on global design trends and user experiences.
       </p>
-      <h3 class="text-gray-700 font-black pt-6">Felipe Pedruski</h3>
-      <!-- Socials -->
-      <div class="grid grid-cols-5 gap-4">
-        <a href="https://www.linkedin.com/in/felipe-santos-poch/">
-          <img class="h-10 w-10" src="./img/linkedin.svg" alt="Linkedin">
-        </a>
-        <a href="https://twitter.com/FelipePedruski">
-          <img class="h-10 w-10" src="./img/twitter.svg" alt="Twitter">
-        </a>
-        <a href="https://github.com/Fpedruski">
-          <img class="h-10 w-10" src="./img/github.svg" alt="GitHub">
-        </a>
-        <a href="tel:+34 661857146">
-          <img class="h-10 w-10" src="./img/telegram-app.svg" alt="Telegram">
-        </a>
-        <a href="http://www.instagram.com/fpedruski/">
-          <img class="h-10 w-10" src="./img/instagram.svg" alt="Instagram">
-        </a>
+      <div id="socials" class="grid grid-cols-5 gap-4">
+        <a href="https://www.linkedin.com/in/fspoch/"><img class="h-10 w-10" src="./img/linkedin.svg" alt="Linkedin"></a>
+        <a href="https://twitter.com/FelipePedruski"><img class="h-10 w-10" src="./img/twitter.svg" alt="Twitter"></a>
+        <a href="https://github.com/Fpedruski"><img class="h-10 w-10" src="./img/github.svg" alt="GitHub"></a>
+        <a href="tel:+34 661857146"><img class="h-10 w-10" src="./img/telegram-app.svg" alt="Telegram"></a>
+        <a href="http://www.instagram.com/fpedruski/"><img class="h-10 w-10" src="./img/instagram.svg" alt="Instagram"></a>
       </div>
     </div>
   </section>
 
   <!-- Work Section -->
-  <section id="work" class="min-h-screen bg-gray-50 flex flex-col justify-center items-center p-6">
+  <section id="work" class="min-h-screen bg-mountbatten_pink flex flex-col justify-center items-center p-6">
     <h2 class="text-3xl font-semibold mb-4">Work</h2>
     <ul class="space-y-3 text-left list-disc list-inside">
       <li>Project One — Description and link</li>
@@ -101,7 +179,7 @@
   </section>
 
   <!-- Lab Section -->
-  <section id="lab" class="min-h-screen flex flex-col justify-center items-center p-6">
+  <section id="lab" class="min-h-screen bg-rose_taupe flex flex-col justify-center items-center p-6">
     <h2 class="text-3xl font-semibold mb-4">Lab</h2>
     <ul class="space-y-3 text-left list-disc list-inside">
       <li>Experiment A — Details</li>
@@ -111,14 +189,33 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="min-h-screen bg-gray-50 flex flex-col justify-center items-center p-6">
+  <section id="contact" class="min-h-screen bg-platinum flex flex-col justify-center items-center p-6">
     <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-    <ul class="flex space-x-6">
+    <ul class="flex space-x-6 mb-6">
       <li><a href="mailto:you@example.com" class="hover:text-gray-900">Email</a></li>
-      <li><a href="https://github.com/username" class="hover:text-gray-900">GitHub</a></li>
-      <li><a href="https://linkedin.com/in/username" class="hover:text-gray-900">LinkedIn</a></li>
-      <li><a href="https://twitter.com/username" class="hover:text-gray-900">Twitter</a></li>
+      <li><a href="https://github.com/fpedruski" class="hover:text-gray-900">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/fspoch" class="hover:text-gray-900">LinkedIn</a></li>
+      <li><a href="https://twitter.com/FelipePedruski" class="hover:text-gray-900">Twitter</a></li>
     </ul>
+
+    <!-- Social icons at the end of the contact zone -->
+    <div class="grid grid-cols-5 gap-4 mt-4">
+      <a href="https://www.linkedin.com/in/fspoch/">
+        <img class="h-10 w-10 social-icon" src="./img/linkedin.svg" alt="LinkedIn">
+      </a>
+      <a href="https://twitter.com/FelipePedruski">
+        <img class="h-10 w-10 social-icon" src="./img/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://github.com/Fpedruski">
+        <img class="h-10 w-10 social-icon" src="./img/github.svg" alt="GitHub">
+      </a>
+      <a href="tel:+34661857146">
+        <img class="h-10 w-10 social-icon" src="./img/telegram-app.svg" alt="Telegram">
+      </a>
+      <a href="http://www.instagram.com/fpedruski/">
+        <img class="h-10 w-10 social-icon" src="./img/instagram.svg" alt="Instagram">
+      </a>
+    </div>
   </section>
 
   <script>
