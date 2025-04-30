@@ -70,7 +70,7 @@
     .gg--indent { margin-left: 56px; }
     .gg-symbol { height: 14px; width: 14px; background: #969696; margin-right: 14px; transform-origin: 0 0; }
     .gg-symbol--disc { border-radius: 14px; }
-    .gg-symbol--rect { /* width overridden */ }
+    /* .gg-symbol--rect { width overridden } */
     .gg-symbol--1 { width: 28px; }
     .gg-symbol--2 { width: 56px; }
     .gg-symbol--3 { width: 84px; }
@@ -82,7 +82,7 @@
     .gg-symbol--9 { width: 252px; }
     .gg-symbol--10 { width: 280px; }
     .gg-symbol--11 { width: 308px; }
-    .gg-symbol--gradient { /* gradient inline */ }
+    /* .gg-symbol--gradient { gradient inline } */
 
     /* add right padding so the rotated menu never overlaps content */
     section#about, section#contact {
@@ -103,6 +103,9 @@
 
     /* Force About background to #FEFEFE */
     #about { background-color: #FEFEFE !important; }
+
+    /* Force Lab background */
+    #lab { background-color: #FEFEFE !important; }
   </style>
 </head>
 
@@ -110,10 +113,10 @@
   <!-- Rotated Menu -->
   <div class="Menu">
     <nav>
-      <a href="/contact" data-id="Contact" data-route="contact">Contact</a>
-      <a href="/lab" data-id="Lab" data-route="lab">Lab</a>
-      <a href="/work" data-id="Work" data-route="work">Work</a>
-      <a href="/about" data-id="About" data-route="about" class="selected">About</a>
+      <a href="#contact" data-id="Contact" data-route="contact">Contact</a>
+      <a href="#lab" data-id="Lab" data-route="lab">Lab</a>
+      <a href="#work" data-id="Work" data-route="work">Work</a>
+      <a href="#about" data-id="About" data-route="about" class="selected">About</a>
     </nav>
   </div>
 
@@ -262,7 +265,7 @@
         if (pageYOffset >= top) currentId = sec.getAttribute('id');
       });
       menuLinks.forEach(link => {
-        link.classList.toggle('selected', link.getAttribute('href') === '/' + currentId);
+        link.classList.toggle('selected', link.getAttribute('href') === '#' + currentId);
       });
     });
   </script>
